@@ -2,7 +2,7 @@ node {
   def aws_ecr_url = "${env.AWS_ECR_REPO_URL}"
   def aws_ecr_repo = "${env.AWS_ECR_REPO_NAME}"
   def aws_ecr_login_cmd = 'aws ecr get-login'
-  def aws_ecr_image_path = "${aws_ecr_repo}:${env.JOB_BASE_NAME}-${env.BUILD_NUMBER}"
+  def aws_ecr_image_path = "${aws_ecr_repo}:${env.JOB_BASE_NAME}"
   
   stage 'Checkout Git Repo'
   git "${GIT_SOURCE_REPO}"
